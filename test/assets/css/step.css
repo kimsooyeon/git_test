@@ -1,0 +1,79 @@
+@charset "utf-8";
+@import url(reset.css);
+body {
+}
+.container {
+  width: 60%;
+  max-width: 1050px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  height: 500px;
+}
+
+.stepArea {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stepArea li {
+  margin-bottom: 20px;
+  position: relative;
+  padding-right: 7.8%;
+  width: 25%;
+}
+.stepArea li img {
+  display: block;
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+}
+
+.stepArea li:last-child::before,
+.stepArea li:last-child::after {
+  content: none;
+}
+
+.stepArea li::before {
+  content: '';
+  display: block;
+  background: #dee2e7;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  margin-top: -1.5px;
+}
+
+.stepArea li::after {
+  content: '';
+  display: block;
+  background: #dee2e7;
+  position: absolute;
+  top: 50%;
+  right: 11%;
+  width: 12px;
+  height: 12px;
+  margin-top: -6px;
+  border-radius: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    border: 1px solid #ddd;
+    width: 90%;
+  }
+  .stepArea li {
+    width: 33.3%;
+  }
+
+  .stepArea li::after {
+    right: 8%;
+    width: 8px;
+    height: 8px;
+    margin-top: -4px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+}

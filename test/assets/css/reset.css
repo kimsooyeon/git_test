@@ -1,0 +1,346 @@
+/* CSS Document 초기화(공통)*/
+
+/* reset style [start] */
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  line-height: 1.5em;
+  font-family: 'Nanum Gothic', sans-serif, '微软雅黑';
+  letter-spacing: -0.025em;
+}
+/* vertical-align: baseline; outline: 0; ie 외 브라우저 포커싱 사라지는 문제로 제거 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1;
+}
+
+/* html5 block */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* 헤더 폰트 사이즈 초기화 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+
+/* 리스트의 스타일 제거 */
+dl,
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+/* 폰트 강조 특성 초기화 */
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var,
+i {
+  font-style: normal;
+} /* font-weight:normal */
+
+/* 테이블 스타일 초기화 */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+} /* border-collapse: collapse; ff에서 border="0" 인 경우 문제 발생 */
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  word-break: break-all;
+}
+caption {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  position: static;
+  left: 0;
+  top: -999999px;
+}
+
+/*이미지 초기화 */
+img {
+  vertical-align: middle;
+  border: 0;
+}
+
+/* 인용구 표시 초기화 */
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+.container:after {
+  content: '';
+  clear: both;
+  display: block;
+} /*IE 6~7 브라우저에서만 작용*/
+.clear {
+  clear: both;
+}
+
+/*부트스트랩 에서 사용*/
+.clearfix:before,
+.clearfix:after {
+  content: ' ';
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+/*etc*/
+address,
+em,
+i {
+  font-style: normal;
+}
+strong {
+  font-weight: 500;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+} /*cursor:help; 물음표*/
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+/*del, ins, s 태그 - 문서 업데이트 및 수정 사항 바로 알 수 있도록 텍스트에 직접 표시
+del 태그는 새롭게 업데이트된 사항에서 그 텍스트가 삭제되었음을 나타냅니다. 가운데 줄그어짐
+ins 태그는 새롭게 업데이트된 사항에서 그 텍스트가 추가되었음을 나타냅니다. 밑줄이 생김
+s태그는 잘못된 텍스트를 강조하기 위해 사용
+mark 태그 - 형광펜 효과 내기 (기본은 노랙색으로 표시)
+*/
+
+/* fieldset */
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+legend {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  font-size: 0;
+  line-height: 100px;
+  white-space: nowrap;
+}
+
+/* form */
+input,
+button,
+select,
+textarea {
+  vertical-align: middle;
+}
+textarea {
+  padding: 1%;
+  border: 1px solid #e5e5e5;
+  font-family: 'Nanum Gothic', sans-serif;
+  color: #4d4d4d;
+  resize: none;
+}
+
+input[type='button'],
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none !important;
+  cursor: pointer;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+button,
+input[type='reset'],
+input[type='button'],
+input[type='submit'] {
+  line-height: normal;
+  border: none;
+}
+
+.ie7 input[type='text'],
+.ie7 input[type='password'],
+.ie7 input[type='tel'] {
+  text-indent: 0 !important;
+}
+.ie8 input[type='text'],
+.ie8 input[type='password'],
+.ie8 input[type='tel'] {
+  padding: 8px 0 5px;
+}
+.ie9 input[type='file'],
+.ie10 input[type='file'],
+.ie11 input[type='file'] {
+  padding: 6px 0 7px;
+  border: none;
+}
+
+input:disabled,
+input:readonly {
+  background: #f1f1f1;
+}
+input[readonly='readonly'],
+input[readonly],
+input[disabled='disabled'],
+input[disabled] {
+  border: 1px solid #e5e5e5;
+  background: #f1f1f1;
+  color: #4d4d4d;
+  text-indent: 10px !important;
+}
+select[disabled] {
+  border: 1px solid #e5e5e5;
+  background: #f1f1f1;
+}
+
+/* input[type="file"], 
+input[type="checkbox"]
+input[type="radio"] {  파일 필드, 체크박스 숨기기
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip:rect(0,0,0,0);
+  border: 0;
+} */

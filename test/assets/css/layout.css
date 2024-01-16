@@ -1,0 +1,98 @@
+@charset "utf-8";
+@import url(reset.css);
+body {
+  background: #f8f8f8;
+}
+.container {
+  width: 700px;
+  margin: 0 auto;
+  background: #000000;
+  height: 500px;
+}
+.container > ul {
+  column-count: 3; /* 컬럼 갯수 */
+  column-gap: 10px; /* 컬럼 사이 여백 */
+}
+.container > ul > li {
+  background: #fff;
+  width: 200px;
+  margin: 3px;
+  break-inside: avoid;
+  align-self: flex-start;
+  float: left;
+}
+
+.container > ul > li > a {
+  background: #3549ff;
+  color: #fff;
+  display: block;
+}
+
+.container > ul > li:first-child {
+  height: 500px;
+}
+
+.container2 {
+  width: 700px;
+  margin: 0 auto;
+  background: #000000;
+  height: 500px;
+  margin-top: 30px;
+}
+.container2 > ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  grid-auto-rows: minmax(100px, auto);
+}
+.container2 > ul > li {
+  background: #fff;
+  width: 200px;
+  margin: 3px;
+  break-inside: avoid;
+  align-self: flex-start;
+  float: left;
+}
+
+.container2 > ul > li:nth-child(1) {
+  grid-row: auto / span 3;
+}
+
+.container2 > ul > li > a {
+  background: #126d09;
+  color: #fff;
+  display: block;
+}
+
+.container2 > ul > li:first-child {
+}
+
+.container3 {
+  width: 700px;
+  margin: 0 auto;
+  background: #000000;
+  height: 500px;
+  margin-top: 30px;
+}
+.container3 > ul {
+}
+.container3 > ul > li {
+  background: #fff;
+  width: 200px;
+  float: left;
+  margin: 0 3px;
+}
+
+.container3 > ul > li:nth-child(1) {
+  grid-row: auto / span 3;
+}
+
+.container3 > ul > li > a {
+  background: #6d1809;
+  color: #fff;
+  display: block;
+}
+
+.container3 > ul > li:first-child {
+  height: 500px;
+}
